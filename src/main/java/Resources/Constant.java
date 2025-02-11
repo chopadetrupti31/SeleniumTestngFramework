@@ -21,4 +21,6 @@ public class Constant {
 	public static String TelephoneActualResult = "Telephone must be between 3 and 32 characters!";
 
 	public static String PasswordActualResult = "Password must be between  and 20 characters!";
+	
+	public static String ClickonSearch="TEST";
 }

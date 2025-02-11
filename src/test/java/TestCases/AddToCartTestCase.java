@@ -11,16 +11,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class AddToCartTestCase {
+import PageOrientedObject.Addtocartpageobject;
+import Resources.BaseClassJava;
+import Resources.Constant;
+
+public class AddToCartTestCase extends BaseClassJava {
 
 	@Test
 	public void VerifyCartAmmount() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://naveenautomationlabs.com/opencart/index.php");
-		driver.manage().window().maximize();
+		
+		 Addtocartpageobject ad= new  Addtocartpageobject(driver);
 
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("iPhone");
+		ad.ClickonSearch().sendKeys(Constant.ClickonSearch);
+		 
+		 //driver.findElement(By.xpath("//input[@type='text']")).sendKeys("iPhone");
 
 		driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
 
